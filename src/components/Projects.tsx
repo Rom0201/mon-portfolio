@@ -21,12 +21,12 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-24 bg-gray-900 px-6">
+    <section id="projects" className="py-24 bg-gray-900 px-16">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold text-white mb-10 text-center">Mes Projets</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {projects.map((project) => (
-            <div key={project.title} className="bg-gray-800 rounded-xl p-6 flex flex-col gap-4 hover:ring-2 hover:ring-indigo-500 transition-all">
+            <div key={project.title} className="bg-gray-800 rounded-xl p-8 flex flex-col gap-4 hover:ring-2 hover:ring-indigo-500 transition-all">
               <h3 className="text-white font-bold text-xl">{project.title}</h3>
               <p className="text-gray-400 flex-1">{project.description}</p>
               <div className="flex flex-wrap gap-2">

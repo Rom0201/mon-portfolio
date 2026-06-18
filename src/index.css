@@ -1,12 +1,22 @@
 @import "tailwindcss";
 
-* {
+*, *::before, *::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-body {
-  min-width: 320px;
+html, body {
+  width: 100%;
   min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  display: block;
+}
+
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
