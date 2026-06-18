@@ -1,12 +1,15 @@
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 bg-gray-950 px-6">
-      <div className="max-w-2xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-white mb-4">Contact</h2>
-        <p className="text-gray-400 mb-10">Une opportunité de stage ? N'hésitez pas à me contacter !</p>
-        <div className="flex flex-col gap-4 items-center">
-          <a href="mailto:romaricarnlt@gmail.com" className="bg-indigo-600 hover:bg-indigo-500 text-white px-8 py-4 rounded-lg font-semibold transition-colors w-full max-w-sm text-center">romaricarnlt@gmail.com</a>
-          <a href="https://github.com/Rom0201" target="_blank" rel="noopener noreferrer" className="border border-gray-600 hover:border-white text-gray-300 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors w-full max-w-sm text-center">GitHub → Rom0201</a>
+    <section id="contact" style={{fontFamily: "'Rajdhani', sans-serif", background: "#0d1117", borderBottom: "1px solid #00e5ff10"}} className="py-24 px-8">
+      <div className="max-w-6xl mx-auto w-full">
+        <div style={{fontFamily: "'Share Tech Mono', monospace", fontSize: "15px", color: "#00e5ff88", letterSpacing: "3px", marginBottom: "24px", display: "flex", alignItems: "center", gap: "12px"}}>
+          CONTACT.sys
+          <span style={{flex: "1", height: "1px", background: "#00e5ff22"}}></span>
+        </div>
+        <div style={{display: "flex", flexDirection: "column", alignItems: "center", gap: "12px"}}>
+          <p style={{fontSize: "16px", color: "#888", marginBottom: "20px", textAlign: "center"}}>Une opportunité de stage ? N'hésitez pas à me contacter !</p>
+          <a href="mailto:romaricarnlt@gmail.com" style={{fontFamily: "'Share Tech Mono', monospace", fontSize: "13px", color: "#0a0c10", background: "#00e5ff", padding: "14px 24px", textDecoration: "none", letterSpacing: "1px", textAlign: "center", borderRadius: "2px", width: "360px"}}>romaricarnlt@gmail.com</a>
+          <a href="https://github.com/Rom0201" target="_blank" rel="noopener noreferrer" style={{fontFamily: "'Share Tech Mono', monospace", fontSize: "13px", color: "#e040fb", border: "1px solid #e040fb66", padding: "14px 24px", textDecoration: "none", letterSpacing: "1px", textAlign: "center", borderRadius: "2px", width: "360px"}}>GITHUB → ROM0201</a>
         </div>
       </div>
     </section>

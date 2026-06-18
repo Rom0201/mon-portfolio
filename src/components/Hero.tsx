@@ -1,13 +1,23 @@
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex flex-col justify-center items-center text-center bg-gray-950 px-6 pt-20" style={{backgroundColor: "#030712"}}>
-      <p style={{color: "#818cf8"}} className="text-lg mb-2 tracking-widest uppercase">Bonjour, je suis</p>
-      <h1 style={{color: "#ffffff"}} className="text-5xl md:text-7xl font-bold mb-4">Romaric</h1>
-      <h2 style={{color: "#9ca3af"}} className="text-2xl md:text-3xl mb-6">Développeur Web Full-Stack</h2>
-      <p style={{color: "#6b7280"}} className="max-w-xl mb-10">En formation à Metz Numeric School, je crée des applications web modernes et je recherche un stage.</p>
-      <div className="flex gap-4">
-        <a href="#projects" style={{backgroundColor: "#4f46e5", color: "#ffffff"}} className="px-6 py-3 rounded-lg font-semibold">Voir mes projets</a>
-        <a href="#contact" style={{border: "1px solid #4b5563", color: "#d1d5db"}} className="px-6 py-3 rounded-lg font-semibold">Me contacter</a>
+    <section id="home" style={{fontFamily: "'Rajdhani', sans-serif", background: "#0a0c10", borderBottom: "1px solid #00e5ff15"}} className="min-h-screen flex flex-col justify-center px-8 pt-20">
+      <div className="max-w-6xl mx-auto w-full">
+        <div style={{display: "inline-flex", alignItems: "center", gap: "8px", fontFamily: "'Share Tech Mono', monospace", fontSize: "11px", color: "#00e5ff", border: "1px solid #00e5ff44", padding: "4px 12px", borderRadius: "2px", marginBottom: "24px", letterSpacing: "2px"}}>
+          <span style={{width: "6px", height: "6px", borderRadius: "50%", background: "#00e5ff", boxShadow: "0 0 6px #00e5ff", display: "inline-block"}}></span>
+          DISPONIBLE POUR UN STAGE
+        </div>
+        <h1 style={{fontSize: "52px", fontWeight: "600", lineHeight: "1.1", marginBottom: "16px", letterSpacing: "1px"}}>
+          <span style={{color: "#ffffff", display: "block"}}>ROMARIC</span>
+          <span style={{color: "#e040fb", display: "block"}}>CONCEPTEUR DÉVELOPPEUR INTÉGRATEUR D'IA</span>
+        </h1>
+        <p style={{fontFamily: "'Share Tech Mono', monospace", fontSize: "13px", color: "#555", lineHeight: "2", marginBottom: "32px", maxWidth: "460px"}}>
+          &gt; Formation @ Metz Numeric School<br/>
+          &gt; React · TypeScript · Python · MySQL
+        </p>
+        <div style={{display: "flex", gap: "12px"}}>
+          <a href="#projects" style={{background: "#00e5ff", color: "#0a0c10", padding: "10px 24px", fontSize: "13px", fontWeight: "700", letterSpacing: "2px", textTransform: "uppercase", textDecoration: "none", borderRadius: "2px", fontFamily: "'Rajdhani', sans-serif"}}>Voir mes projets</a>
+          <a href="#contact" style={{background: "transparent", color: "#e040fb", padding: "10px 24px", fontSize: "13px", letterSpacing: "2px", textTransform: "uppercase", border: "1px solid #e040fb66", textDecoration: "none", borderRadius: "2px", fontFamily: "'Rajdhani', sans-serif"}}>Me contacter</a>
+        </div>
       </div>
     </section>
   );

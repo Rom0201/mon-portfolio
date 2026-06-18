@@ -1,44 +1,16 @@
-import { useState } from "react";
-
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-gray-900 shadow-md">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-
-        {/* Logo */}
-        <div className="text-white font-bold text-xl">Romaric.dev</div>
-
-        {/* Nav desktop */}
+    <header style={{fontFamily: "'Share Tech Mono', monospace", background: "#0a0c10ee", borderBottom: "1px solid #00e5ff22"}} className="fixed top-0 left-0 w-full z-50">
+      <div className="max-w-6xl mx-auto px-8 py-4 flex justify-between items-center">
+        <span style={{color: "#00e5ff", letterSpacing: "4px", fontSize: "15px"}}>R0MARIC ARKOUCHA</span>
         <nav className="hidden md:flex gap-8">
-          <a href="#home" className="text-gray-300 hover:text-white transition-colors">Accueil</a>
-          <a href="#about" className="text-gray-300 hover:text-white transition-colors">À propos</a>
-          <a href="#skills" className="text-gray-300 hover:text-white transition-colors">Compétences</a>
-          <a href="#projects" className="text-gray-300 hover:text-white transition-colors">Projets</a>
-          <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</a>
+          <a href="#home" style={{color: "#888", fontSize: "13px", letterSpacing: "1px", textDecoration: "none", textTransform: "uppercase"}}>Accueil</a>
+          <a href="#about" style={{color: "#888", fontSize: "13px", letterSpacing: "1px", textDecoration: "none", textTransform: "uppercase"}}>À propos</a>
+          <a href="#skills" style={{color: "#888", fontSize: "13px", letterSpacing: "1px", textDecoration: "none", textTransform: "uppercase"}}>Skills</a>
+          <a href="#projects" style={{color: "#888", fontSize: "13px", letterSpacing: "1px", textDecoration: "none", textTransform: "uppercase"}}>Projets</a>
+          <a href="#contact" style={{color: "#888", fontSize: "13px", letterSpacing: "1px", textDecoration: "none", textTransform: "uppercase"}}>Contact</a>
         </nav>
-
-        {/* Burger mobile */}
-        <button
-          className="md:hidden text-white text-2xl"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Menu"
-        >
-          {menuOpen ? "✕" : "☰"}
-        </button>
       </div>
-
-      {/* Menu mobile */}
-      {menuOpen && (
-        <div className="md:hidden bg-gray-800 px-6 pb-4 flex flex-col gap-4">
-          <a href="#home" className="text-gray-300 hover:text-white" onClick={() => setMenuOpen(false)}>Accueil</a>
-          <a href="#about" className="text-gray-300 hover:text-white" onClick={() => setMenuOpen(false)}>À propos</a>
-          <a href="#skills" className="text-gray-300 hover:text-white" onClick={() => setMenuOpen(false)}>Compétences</a>
-          <a href="#projects" className="text-gray-300 hover:text-white" onClick={() => setMenuOpen(false)}>Projets</a>
-          <a href="#contact" className="text-gray-300 hover:text-white" onClick={() => setMenuOpen(false)}>Contact</a>
-        </div>
-      )}
     </header>
   );
 };

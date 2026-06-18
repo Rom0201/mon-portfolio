@@ -21,20 +21,23 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-24 bg-gray-900 px-16">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-white mb-10 text-center">Mes Projets</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {projects.map((project) => (
-            <div key={project.title} className="bg-gray-800 rounded-xl p-8 flex flex-col gap-4 hover:ring-2 hover:ring-indigo-500 transition-all">
-              <h3 className="text-white font-bold text-xl">{project.title}</h3>
-              <p className="text-gray-400 flex-1">{project.description}</p>
-              <div className="flex flex-wrap gap-2">
+    <section id="projects" style={{fontFamily: "'Rajdhani', sans-serif", background: "#0a0c10", borderBottom: "1px solid #00e5ff10"}} className="py-24 px-8">
+      <div className="max-w-6xl mx-auto w-full">
+        <div style={{fontFamily: "'Share Tech Mono', monospace", fontSize: "15px", color: "#00e5ff88", letterSpacing: "3px", marginBottom: "24px", display: "flex", alignItems: "center", gap: "12px"}}>
+          PROJETS.log
+          <span style={{flex: "1", height: "1px", background: "#00e5ff22"}}></span>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {projects.map((project, i) => (
+            <div key={project.title} style={{background: "#0d1117", border: "1px solid #00e5ff22", borderRadius: "2px", padding: "20px", display: "flex", flexDirection: "column", gap: "12px", borderLeft: i === 0 ? "3px solid #00e5ff" : i === 1 ? "3px solid #e040fb" : "3px solid #76ff03"}}>
+              <h3 style={{fontFamily: "'Share Tech Mono', monospace", fontSize: "14px", color: "#ffffff", letterSpacing: "1px"}}>{project.title}</h3>
+              <p style={{fontSize: "13px", color: "#555", lineHeight: "1.7", flex: "1"}}>{project.description}</p>
+              <div style={{display: "flex", flexWrap: "wrap", gap: "6px"}}>
                 {project.tags.map((tag) => (
-                  <span key={tag} className="bg-indigo-900 text-indigo-300 text-xs px-3 py-1 rounded-full">{tag}</span>
+                  <span key={tag} style={{fontFamily: "'Share Tech Mono', monospace", fontSize: "10px", color: "#e040fb", border: "1px solid #e040fb33", padding: "2px 8px", borderRadius: "2px"}}>{tag}</span>
                 ))}
               </div>
-              <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:text-indigo-300 text-sm font-semibold transition-colors">Voir le projet →</a>
+              <a href={project.link} target="_blank" rel="noopener noreferrer" style={{fontFamily: "'Share Tech Mono', monospace", fontSize: "11px", color: "#00e5ff", textDecoration: "none", letterSpacing: "1px"}}>VOIR LE PROJET →</a>
             </div>
           ))}
         </div>

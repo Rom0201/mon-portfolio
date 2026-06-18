@@ -1,28 +1,19 @@
 const Skills = () => {
-  const skills = [
-    { name: "HTML", level: 85 },
-    { name: "CSS", level: 80 },
-    { name: "JavaScript", level: 75 },
-    { name: "React", level: 70 },
-    { name: "TypeScript", level: 65 },
-    { name: "Python", level: 60 },
-    { name: "MySQL", level: 65 },
-    { name: "PHP", level: 55 },
-  ];
+  const skills = ["HTML", "CSS", "JavaScript", "React", "TypeScript", "Python", "MySQL", "PHP", "Flask", "Docker", "Git"];
 
   return (
-    <section id="skills" className="py-24 bg-gray-950 px-6">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-white mb-10 text-center">Compétences</h2>
+    <section id="skills" style={{fontFamily: "'Rajdhani', sans-serif", background: "#0d1117", borderBottom: "1px solid #00e5ff10"}} className="py-24 px-8">
+      <div className="max-w-6xl mx-auto w-full">
+        <div style={{fontFamily: "'Share Tech Mono', monospace", fontSize: "15px", color: "#00e5ff88", letterSpacing: "3px", marginBottom: "24px", display: "flex", alignItems: "center", gap: "12px"}}>
+          SKILLS.exe
+          <span style={{flex: "1", height: "1px", background: "#00e5ff22"}}></span>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {skills.map((skill) => (
-            <div key={skill.name} className="bg-gray-800 rounded-lg p-5">
-              <div className="flex justify-between mb-2">
-                <span className="text-white font-semibold">{skill.name}</span>
-                <span className="text-indigo-400">{skill.level}%</span>
-              </div>
-              <div className="w-full bg-gray-700 rounded-full h-2">
-                <div className="bg-indigo-500 h-2 rounded-full" style={{ width: `${skill.level}%` }}></div>
+            <div key={skill} style={{background: "#0a0c10", border: "1px solid #00e5ff22", borderRadius: "2px", padding: "16px 20px"}}>
+              <span style={{fontFamily: "'Share Tech Mono', monospace", color: "#e0e0e0", fontSize: "13px", letterSpacing: "1px", display: "block", marginBottom: "10px"}}>{skill}</span>
+              <div style={{width: "100%", background: "#1a1a2e", borderRadius: "1px", height: "3px"}}>
+                <div style={{width: "100%", background: "linear-gradient(90deg, #00e5ff, #e040fb)", height: "3px", borderRadius: "1px"}}></div>
               </div>
             </div>
           ))}
