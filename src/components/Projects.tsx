@@ -18,10 +18,16 @@ const Projects = () => {
       tags: ["React", "Flask", "TensorFlow", "MySQL", "Docker"],
       link: "https://github.com/Rom0201",
     },
+    {
+      title: "ARK_VIEW",
+      description: "Application web de préstation Vidéo/Montage pour de l'événementiel.",
+      tags: ["HTML", "CSS", "JavaScript", "MySQL", "Docker"],
+      link: "https://rom0201.github.io/ark_view/#accueil",
+    },
   ];
 
   return (
-    <section id="projects" style={{fontFamily: "'Rajdhani', sans-serif", background: "#0a0c10", borderBottom: "1px solid #00e5ff10"}} className="py-24 px-8">
+    <section id="projects" style={{fontFamily: "'Rajdhani', sans-serif", background: "#0a0c10", borderBottom: "1px solid #00e5ff10", paddingTop: "128px", paddingBottom: "128px", minHeight: "100vh", display: "flex", alignItems: "center"}} className="px-8">
       <div className="max-w-6xl mx-auto w-full">
         <div style={{fontFamily: "'Share Tech Mono', monospace", fontSize: "15px", color: "#00e5ff88", letterSpacing: "3px", marginBottom: "24px", display: "flex", alignItems: "center", gap: "12px"}}>
           PROJETS.log
@@ -29,7 +35,7 @@ const Projects = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {projects.map((project, i) => (
-            <div key={project.title} style={{background: "#0d1117", border: "1px solid #00e5ff22", borderRadius: "2px", padding: "20px", display: "flex", flexDirection: "column", gap: "12px", borderLeft: i === 0 ? "3px solid #00e5ff" : i === 1 ? "3px solid #e040fb" : "3px solid #76ff03"}}>
+            <div key={project.title} style={{background: "#0d1117", border: "1px solid #00e5ff22", borderRadius: "2px", padding: "20px", display: "flex", flexDirection: "column", gap: "12px", borderLeft: i === 0 ? "3px solid #00e5ff" : i === 1 ? "3px solid #e040fb" : i === 2 ? "3px solid #76ff03" : "3px solid #ff1744"}}>
               <h3 style={{fontFamily: "'Share Tech Mono', monospace", fontSize: "14px", color: "#ffffff", letterSpacing: "1px"}}>{project.title}</h3>
               <p style={{fontSize: "13px", color: "#555", lineHeight: "1.7", flex: "1"}}>{project.description}</p>
               <div style={{display: "flex", flexWrap: "wrap", gap: "6px"}}>

@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <section id="contact" style={{fontFamily: "'Rajdhani', sans-serif", background: "#0d1117", borderBottom: "1px solid #00e5ff10"}} className="py-24 px-8">
+    <section id="contact" style={{fontFamily: "'Rajdhani', sans-serif", background: "#0d1117", borderBottom: "1px solid #00e5ff10", paddingTop: "128px", paddingBottom: "128px", minHeight: "100vh", display: "flex", alignItems: "center"}} className="px-8">
       <div className="max-w-6xl mx-auto w-full">
         <div style={{fontFamily: "'Share Tech Mono', monospace", fontSize: "15px", color: "#00e5ff88", letterSpacing: "3px", marginBottom: "24px", display: "flex", alignItems: "center", gap: "12px"}}>
           CONTACT.sys
