@@ -2,6 +2,7 @@ import { useState } from "react";
 import miticaImg from "../assets/projects/mitica.png";
 import arkouchaImg from "../assets/projects/arkoucha.png";
 import arkviewImg from "../assets/projects/arkview.png";
+import GlitchImage from "./GlitchImage";
 
 const Projects = () => {
   const [openProject, setOpenProject] = useState<string | null>(null);
@@ -58,9 +59,9 @@ const Projects = () => {
                 )}
               </div>
 
-              {openProject === project.title && project.image && (
-                <img src={project.image} alt={project.title} onClick={() => setZoomedImage(project.image)} style={{width: "100%", borderRadius: "2px", border: "1px solid #00e5ff33", cursor: "zoom-in"}} />
-              )}
+                {openProject === project.title && project.image && (
+            <GlitchImage src={project.image} alt={project.title} onClick={() => setZoomedImage(project.image)} style={{borderRadius: "2px", border: "1px solid #00e5ff33", cursor: "zoom-in"}} />
+            )}
 
               <p style={{fontSize: "13px", color: "#555", lineHeight: "1.7", flex: "1"}}>{project.description}</p>
               <div style={{display: "flex", flexWrap: "wrap", gap: "6px"}}>

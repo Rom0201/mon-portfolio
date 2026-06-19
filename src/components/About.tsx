@@ -16,7 +16,7 @@ const About = () => {
             <div style={{background: "#0d1117", border: "1px solid #00e5ff22", padding: "12px 18px", borderRadius: "2px", fontFamily: "'Share Tech Mono', monospace", fontSize: "13px", color: "#888"}}>🎓 Metz Numeric School</div>
             <div style={{background: "#0d1117", border: "1px solid #00e5ff22", padding: "12px 18px", borderRadius: "2px", fontFamily: "'Share Tech Mono', monospace", fontSize: "13px", color: "#888"}}>📍 France</div>
             <div style={{background: "#0d1117", border: "1px solid #00e5ff22", padding: "12px 18px", borderRadius: "2px", fontFamily: "'Share Tech Mono', monospace", fontSize: "13px", color: "#00e5ff"}}>🔍 Disponible pour un stage</div>
-            <div style={{background: "#0d1117", border: "1px solid #00e5ff22", padding: "12px 18px", borderRadius: "2px", fontFamily: "'Share Tech Mono', monospace", fontSize: "13px", color: "#888"}}>💻 Full-Stack Junior</div>
+            <div style={{background: "#0d1117", border: "1px solid #00e5ff22", padding: "12px 18px", borderRadius: "2px", fontFamily: "'Share Tech Mono', monospace", fontSize: "13px", color: "#888"}}>💻 Concépteur Développeur Intégrateur d'IA</div>
           </div>
         </div>
       </div>
