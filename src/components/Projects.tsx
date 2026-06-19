@@ -1,42 +1,67 @@
+import { useState } from "react";
+import miticaImg from "../assets/projects/mitica.png";
+import arkouchaImg from "../assets/projects/arkoucha.png";
+import arkviewImg from "../assets/projects/arkview.png";
+
 const Projects = () => {
+  const [openProject, setOpenProject] = useState<string | null>(null);
+  const [zoomedImage, setZoomedImage] = useState<string | null>(null);
+
   const projects = [
     {
       title: "Pizzeria MITICA",
       description: "Application de carte de fidélité pour une pizzeria. Développée avec Electron et SQLite.",
       tags: ["React", "Electron", "SQLite", "TypeScript"],
       link: "https://github.com/Rom0201/pizzeria-fidelite",
+      image: miticaImg,
     },
     {
       title: "Atelier Arkoucha",
       description: "Site galerie pour une artiste peintre avec système de QR codes pour expositions.",
       tags: ["HTML", "CSS", "JavaScript"],
       link: "https://rom0201.github.io/atelier_arkoucha/",
+      image: arkouchaImg,
+    },
+    {
+      title: "ARK_VIEW",
+      description: "Site vitrine pour un service de prise de vue par drone.",
+      tags: ["HTML", "CSS", "JavaScript"],
+      link: "https://github.com/Rom0201",
+      image: arkviewImg,
     },
     {
       title: "GreenCheck",
       description: "Application web de diagnostic de santé des plantes par photo, utilisant l'IA.",
       tags: ["React", "Flask", "TensorFlow", "MySQL", "Docker"],
       link: "https://github.com/Rom0201",
-    },
-    {
-      title: "ARK_VIEW",
-      description: "Application web de préstation Vidéo/Montage pour de l'événementiel.",
-      tags: ["HTML", "CSS", "JavaScript", "MySQL", "Docker"],
-      link: "https://rom0201.github.io/ark_view/#accueil",
+      image: null,
     },
   ];
 
   return (
-    <section id="projects" style={{fontFamily: "'Rajdhani', sans-serif", background: "#0a0c10", borderBottom: "1px solid #00e5ff10", paddingTop: "128px", paddingBottom: "128px", minHeight: "100vh", display: "flex", alignItems: "center"}} className="px-8">
+    <section id="projects" style={{fontFamily: "'Rajdhani', sans-serif", background: "#0a0c10", borderBottom: "1px solid #00e5ff10", paddingTop: "128px", paddingBottom: "128px", minHeight: "100vh", display: "flex", alignItems: "center", position: "relative"}} className="px-8">
       <div className="max-w-6xl mx-auto w-full">
-        <div style={{fontFamily: "'Share Tech Mono', monospace", fontSize: "15px", color: "#00e5ff88", letterSpacing: "3px", marginBottom: "24px", display: "flex", alignItems: "center", gap: "12px"}}>
+        <div style={{fontFamily: "'Share Tech Mono', monospace", fontSize: "11px", color: "#00e5ff88", letterSpacing: "3px", marginBottom: "24px", display: "flex", alignItems: "center", gap: "12px"}}>
           PROJETS.log
           <span style={{flex: "1", height: "1px", background: "#00e5ff22"}}></span>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {projects.map((project, i) => (
             <div key={project.title} style={{background: "#0d1117", border: "1px solid #00e5ff22", borderRadius: "2px", padding: "20px", display: "flex", flexDirection: "column", gap: "12px", borderLeft: i === 0 ? "3px solid #00e5ff" : i === 1 ? "3px solid #e040fb" : i === 2 ? "3px solid #76ff03" : "3px solid #ff1744"}}>
-              <h3 style={{fontFamily: "'Share Tech Mono', monospace", fontSize: "14px", color: "#ffffff", letterSpacing: "1px"}}>{project.title}</h3>
+              <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
+                <h3 style={{fontFamily: "'Share Tech Mono', monospace", fontSize: "14px", color: "#ffffff", letterSpacing: "1px"}}>{project.title}</h3>
+                {project.image && (
+                  <button onClick={() => setOpenProject(openProject === project.title ? null : project.title)} style={{background: "none", border: "1px solid #00e5ff44", borderRadius: "2px", padding: "4px 10px", cursor: "pointer", color: "#00e5ff", fontSize: "10px", fontFamily: "'Share Tech Mono', monospace", letterSpacing: "1px"}} title="Voir une capture d'écran">
+                    [VIEW]
+                  </button>
+                )}
+              </div>
+
+              {openProject === project.title && project.image && (
+                <img src={project.image} alt={project.title} onClick={() => setZoomedImage(project.image)} style={{width: "100%", borderRadius: "2px", border: "1px solid #00e5ff33", cursor: "zoom-in"}} />
+              )}
+
               <p style={{fontSize: "13px", color: "#555", lineHeight: "1.7", flex: "1"}}>{project.description}</p>
               <div style={{display: "flex", flexWrap: "wrap", gap: "6px"}}>
                 {project.tags.map((tag) => (
@@ -48,6 +73,12 @@ const Projects = () => {
           ))}
         </div>
       </div>
+
+      {zoomedImage && (
+        <div onClick={() => setZoomedImage(null)} style={{position: "fixed", top: 0, left: 0, width: "100%", height: "100%", background: "rgba(0, 0, 0, 0.9)", display: "flex", alignItems: "center", justifyContent: "center", zIndex: 1000, cursor: "zoom-out"}}>
+          <img src={zoomedImage} alt="Aperçu agrandi" style={{maxWidth: "90%", maxHeight: "90%", borderRadius: "4px", border: "1px solid #00e5ff44"}} />
+        </div>
+      )}
     </section>
   );
 };
