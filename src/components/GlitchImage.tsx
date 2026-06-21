@@ -21,6 +21,8 @@ const GlitchImage = ({ src, alt, onClick, style }: GlitchImageProps) => {
     return () => timers.forEach(clearTimeout);
   }, [src]);
 
+  const scanLineTop = `${(phase / 4) * 100}%`;
+
   return (
     <div style={{ position: "relative", overflow: "hidden", ...style }}>
       <img
@@ -46,17 +48,16 @@ const GlitchImage = ({ src, alt, onClick, style }: GlitchImageProps) => {
         }}
       />
       {phase < 4 && (
-        <>
+        <div>
           <div
             style={{
               position: "absolute",
-              top: 0,
+              top: scanLineTop,
               left: 0,
               width: "100%",
               height: "2px",
               background: "#00e5ff",
               boxShadow: "0 0 10px #00e5ff",
-              top: `${(phase / 4) * 100}%`,
             }}
           />
           <div
@@ -66,11 +67,12 @@ const GlitchImage = ({ src, alt, onClick, style }: GlitchImageProps) => {
               left: 0,
               width: "100%",
               height: "100%",
-              background: "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,229,255,0.05) 2px, rgba(0,229,255,0.05) 4px)",
+              background:
+                "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,229,255,0.05) 2px, rgba(0,229,255,0.05) 4px)",
               pointerEvents: "none",
             }}
           />
-        </>
+        </div>
       )}
     </div>
   );
