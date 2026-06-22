@@ -31,7 +31,7 @@ const Projects = () => {
       image: arkviewImg,
     },
     {
-      title: "GreenCheck",
+      title: "GreenCheck (en cours)",
       description: "Application web de diagnostic de santé des plantes par photo, utilisant l'IA.",
       tags: ["React", "Flask", "TensorFlow", "MySQL", "Docker"],
       link: "https://github.com/Rom0201",
