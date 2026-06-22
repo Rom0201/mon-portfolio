@@ -29,3 +29,9 @@ body {
   margin-left: auto !important;
   margin-right: auto !important;
 }
+
+@media (max-width: 768px) {
+  #home h1 {
+    font-size: 32px !important;
+  }
+}

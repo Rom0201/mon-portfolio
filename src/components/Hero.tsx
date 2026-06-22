@@ -9,7 +9,8 @@ const Hero = () => {
           <span style={{width: "6px", height: "6px", borderRadius: "50%", background: "#00e5ff", boxShadow: "0 0 6px #00e5ff", display: "inline-block"}}></span>
           DISPONIBLE POUR UN STAGE
         </div>
-        <h1 className="text-3xl md:text-5xl" style={{fontWeight: "600", lineHeight: "1.1", marginBottom: "16px", letterSpacing: "1px"}}>          <span style={{color: "#ffffff", display: "block"}}>ROMARIC</span>
+        <h1 style={{fontSize: "52px", fontWeight: "600", lineHeight: "1.1", marginBottom: "16px", letterSpacing: "1px"}}>
+          <span style={{color: "#ffffff", display: "block"}}>ROMARIC</span>
           <span style={{color: "#e040fb", display: "block"}}>CONCEPTEUR DÉVELOPPEUR INTÉGRATEUR D'IA</span>
         </h1>
         <p style={{fontFamily: "'Share Tech Mono', monospace", fontSize: "13px", color: "#555", lineHeight: "2", marginBottom: "32px", maxWidth: "460px"}}>
