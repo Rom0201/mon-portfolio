@@ -10,10 +10,11 @@ const Hero = () => {
         borderBottom: "1px solid #00e5ff15",
         minHeight: "100vh",
         display: "flex",
+        alignItems: "center",
         position: "relative",
         overflow: "hidden",
       }}
-      className="px-8 pt-20 items-start md:items-center"
+      className="px-8 pt-20"
     >
       {" "}
       <HalftoneBackground />
