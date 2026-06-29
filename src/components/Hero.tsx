@@ -65,7 +65,7 @@ const Hero = () => {
         </div>
 
         <h1
-          className="text-[32px] md:text-[52px] md:mt-0"
+          className="text-[32px] md:text-[52px] -mt-8 md:mt-0"
           style={{
             fontWeight: "600",
             lineHeight: "1.1",
@@ -82,7 +82,7 @@ const Hero = () => {
           </span>
         </h1>
 
-        {/* Desktop */}
+        {/* Version desktop */}
         <div className="hidden md:block">
           <p
             style={{
@@ -139,7 +139,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Mobile */}
+      {/* Version mobile */}
       <div
         className="md:hidden"
         style={{
