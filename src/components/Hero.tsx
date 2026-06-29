@@ -23,7 +23,7 @@ const Hero = () => {
         className="md:hidden"
         style={{
           position: "absolute",
-          top: "90px",
+          top: "70px",
           left: "32px",
           zIndex: 2,
           display: "inline-flex",
@@ -65,7 +65,7 @@ const Hero = () => {
         </div>
 
         <h1
-          className="text-[32px] md:text-[52px] mt-12 md:mt-0"
+          className="text-[32px] md:text-[52px] mt-8 md:mt-0"
           style={{
             fontWeight: "600",
             lineHeight: "1.1",
@@ -142,7 +142,7 @@ const Hero = () => {
         className="md:hidden"
         style={{
           position: "absolute",
-          bottom: "60px",
+          bottom: "30px",
           left: "32px",
           right: "32px",
           zIndex: 2,
