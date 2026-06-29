@@ -20,7 +20,7 @@ const Hero = () => {
 
       {/* Badge mobile */}
       <div
-        className="md:hidden"
+        className="mobile-only"
         style={{
           position: "absolute",
           top: "70px",
@@ -47,8 +47,9 @@ const Hero = () => {
       >
         {/* Badge desktop */}
         <div
-          className="hidden md:inline-flex"
+          className="desktop-only"
           style={{
+            display: "inline-flex",
             alignItems: "center",
             gap: "8px",
             fontFamily: "'Share Tech Mono', monospace",
@@ -65,7 +66,6 @@ const Hero = () => {
         </div>
 
         <h1
-          className="text-[32px] md:text-[52px] -mt-8 md:mt-0"
           style={{
             fontWeight: "600",
             lineHeight: "1.1",
@@ -83,7 +83,7 @@ const Hero = () => {
         </h1>
 
         {/* Version desktop */}
-        <div className="hidden md:block">
+        <div className="desktop-only">
           <p
             style={{
               fontFamily: "'Share Tech Mono', monospace",
@@ -141,7 +141,7 @@ const Hero = () => {
 
       {/* Version mobile */}
       <div
-        className="md:hidden"
+        className="mobile-only"
         style={{
           position: "absolute",
           bottom: "40px",
