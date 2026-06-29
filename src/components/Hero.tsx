@@ -65,7 +65,7 @@ const Hero = () => {
         </div>
 
         <h1
-          className="text-[32px] md:text-[52px] mt-4 md:mt-0"
+          className="text-[32px] md:text-[52px] -mt-8 md:mt-0"
           style={{
             fontWeight: "600",
             lineHeight: "1.1",
@@ -74,7 +74,7 @@ const Hero = () => {
           }}
         >
           <span style={{ color: "#ffffff", display: "block" }}>
-            ROMARIC ARKOUCHA
+            ARKOUCHA ROMARIC
           </span>
 
           <span style={{ color: "#e040fb", display: "block" }}>
@@ -144,7 +144,7 @@ const Hero = () => {
         className="md:hidden"
         style={{
           position: "absolute",
-          bottom: "30px",
+          bottom: "40px",
           left: "32px",
           right: "32px",
           zIndex: 2,
