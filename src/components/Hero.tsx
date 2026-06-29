@@ -65,7 +65,7 @@ const Hero = () => {
         </div>
 
         <h1
-          className="text-[32px] md:text-[52px] mt-8 md:mt-0"
+          className="text-[32px] md:text-[52px] mt-4 md:mt-0"
           style={{
             fontWeight: "600",
             lineHeight: "1.1",
@@ -73,7 +73,9 @@ const Hero = () => {
             letterSpacing: "1px",
           }}
         >
-          <span style={{ color: "#ffffff", display: "block" }}>ROMARIC</span>
+          <span style={{ color: "#ffffff", display: "block" }}>
+            ROMARIC ARKOUCHA
+          </span>
 
           <span style={{ color: "#e040fb", display: "block" }}>
             CONCEPTEUR DÉVELOPPEUR INTÉGRATEUR D'IA
